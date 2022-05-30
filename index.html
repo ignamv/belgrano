@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>🇦🇷</title>
+<style type="text/css">
+html {
+  background-color: #eee;
+  user-select: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+#celeste { 
+  background-color: #75AADB; 
+  position: absolute;
+  width: 60%; 
+  left: 20%;
+  aspect-ratio: 8 / 5;
+  top: 0; bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#blanco { 
+  background-color: white; 
+  position: absolute;
+  width: 100%;
+  top: 33%;
+  height: 33%;
+  font-size: 9vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+</style>
+  <script type="text/javascript">
+    function random_emoji() {
+const options=[..."😂❤️😍🤣😊🙏💕😭😘👍😅👏😁♥️🔥💔💖💙😢🤔😆🙄💪😉☺️👌🤗💜😔😎😇🌹🤦🎉‼️💞✌️✨🤷😱😌🌸🙌😋💗💚😏💛🙂💓🤩😄😀🖤😃💯🙈👇🎶😒🤭❣️❗😜💋👀😪😑💥🙋😞😩😡🤪👊☀️😥🤤👉💃😳✋😚😝😴🌟😬🙃🍀🌷😻😓⭐✅🌈😈🤘💦✔️😣🏃💐☹️🎊💘😠☝️😕🌺🎂🌻😐🖕💝🙊😹🗣️💫💀👑🎵🤞😛🔴😤🌼😫⚽🤙☕🏆🧡🎁⚡🌞🎈❌✊👋😲🌿🤫👈😮🙆🍻🍃🐶💁😰🤨😶🤝🚶💰🍓💢🇺🇸🤟🙁🚨💨🤬✈️🎀🍺🤓😙💟🌱😖👶▶️➡️❓💎💸⬇️😨🌚🦋😷🕺⚠️🙅😟😵👎🤲🤠🤧📌🔵💅🧐🐾🍒😗🤑🚀🌊🤯🐷☎️💧😯💆👆🎤🙇🍑❄️🌴🇧🇷💣🐸💌📍🥀🤢👅💡💩⁉️👐📸👻🤐🤮🎼✍️🚩🍎🍊👼💍📣🥂⤵️📱☔🌙"];
+      return options[Math.round(Math.random() * options.length)];
+    }
+function goToRandomEmoji() {
+    location.replace('#' + random_emoji());
+}
+    function onload() {
+      if (location.hash === "") {
+        goToRandomEmoji();
+      }
+      let contenido = decodeURIComponent(location.href.split('#')[1]);
+      console.log(contenido);
+      console.log(contenido === undefined);
+      if (contenido === undefined) {
+        console.log(contenido);
+        contenido = "";
+      }
+      console.log(contenido);
+      document.getElementById('blanco').innerHTML = contenido;
+    }
+window.onclick = goToRandomEmoji;
+  </script>
+  </head>
+
+  <body onload="onload();" onhashchange="onload();" onclick="goToRandomEmoji()">
+
+    <div id="celeste">
+      <div id="blanco">...&#x1F31E;</div>
+    </div>
+  </body>
+
+</html>
